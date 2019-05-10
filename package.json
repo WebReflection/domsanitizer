@@ -1,0 +1,26 @@
+{
+  "name": "domsanitizer",
+  "version": "0.0.0",
+  "description": "A template to parsable tree transformer used to produce valid HTML content.",
+  "main": "cjs/index.js",
+  "module": "esm/index.js",
+  "unpkg": "min.js",
+  "scripts": {
+    "build": "npm run cjs && npm run rollup && npm run min",
+    "cjs": "ascjs esm cjs",
+    "rollup": "rollup --config rollup.config.js && sed -i.bck 's/exports.default = index;/return index;/' index.js && rm index.js.bck",
+    "min": "echo '/*! (c) Andrea Giammarchi - ISC */' > min.js && uglifyjs index.js -c -m >> min.js"
+  },
+  "keywords": ["dom", "sanitizer"],
+  "author": "Andrea Giammarchi",
+  "license": "ISC",
+  "devDependencies": {
+    "ascjs": "^3.0.1",
+    "rollup": "^1.11.3",
+    "rollup-plugin-node-resolve": "^4.2.3",
+    "uglify-js": "^3.5.11"
+  },
+  "dependencies": {
+    "domconstants": "^0.1.0"
+  }
+}
