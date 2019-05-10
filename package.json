@@ -11,7 +11,10 @@
     "rollup": "rollup --config rollup.config.js && sed -i.bck 's/exports.default = index;/return index;/' index.js && rm index.js.bck",
     "min": "echo '/*! (c) Andrea Giammarchi - ISC */' > min.js && uglifyjs index.js -c -m >> min.js"
   },
-  "keywords": ["dom", "sanitizer"],
+  "keywords": [
+    "dom",
+    "sanitizer"
+  ],
   "author": "Andrea Giammarchi",
   "license": "ISC",
   "devDependencies": {
@@ -22,5 +25,13 @@
   },
   "dependencies": {
     "domconstants": "^0.1.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebReflection/domsanitizer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/WebReflection/domsanitizer/issues"
+  },
+  "homepage": "https://github.com/WebReflection/domsanitizer#readme"
 }
