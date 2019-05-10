@@ -1,5 +1,7 @@
 # domsanitizer
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/WebReflection/domsanitizer.svg)](https://greenkeeper.io/)
+
 A template to parsable tree transformer used to produce valid HTML content.
 
 This project aim is to provide a unified transformer across these projects (or more)
