@@ -6,7 +6,7 @@
   "module": "esm/index.js",
   "unpkg": "min.js",
   "scripts": {
-    "build": "npm run cjs && npm run rollup && npm run min",
+    "build": "npm run cjs && npm run rollup && npm run test && npm run min",
     "cjs": "ascjs esm cjs",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
     "rollup": "rollup --config rollup.config.js && sed -i.bck 's/exports.default = index;/return index;/' index.js && rm index.js.bck",
@@ -21,11 +21,11 @@
   "license": "ISC",
   "devDependencies": {
     "ascjs": "^3.0.1",
-    "coveralls": "^3.0.3",
+    "coveralls": "^3.0.5",
     "istanbul": "^0.4.5",
-    "rollup": "^1.11.3",
-    "rollup-plugin-node-resolve": "^5.0.0",
-    "uglify-js": "^3.5.11"
+    "rollup": "^1.17.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "uglify-js": "^3.6.0"
   },
   "dependencies": {
     "domconstants": "^0.1.1"

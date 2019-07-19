@@ -1,6 +1,6 @@
 const {default: sanitizer} = require('../cjs');
 
-console.assert(sanitizer(['<test/>']) === '<test></test>', '<test/>');
+console.assert(sanitizer(['<t:e.s_t-0/>']) === '<t:e.s_t-0></t:e.s_t-0>', '<t:e.s_t-0/>');
 console.assert(sanitizer(['<img/>']) === '<img/>', '<img/>');
 console.assert(sanitizer(['<input type=password>']) === '<input type=password>', '<input type=password>');
 console.assert(/^<input type="[^\"]+">$/.test(sanitizer(['<input type=', '>'])), '<input type=...>');

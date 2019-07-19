@@ -12,7 +12,7 @@ Object.defineProperty(exports, '__esModule', {value: true}).default = function (
 var spaces = ' \\f\\n\\r\\t';
 var almostEverything = '[^' + spaces + '\\/>"\'=]+';
 var attrName = '[' + spaces + ']+' + almostEverything;
-var tagName = '<([A-Za-z]+[A-Za-z0-9:_-]*)((?:';
+var tagName = '<([A-Za-z]+[A-Za-z0-9:._-]*)((?:';
 var attrPartials = '(?:\\s*=\\s*(?:\'[^\']*?\'|"[^"]*?"|<[^>]*?>|' + almostEverything.replace('\\/', '') + '))?)';
 
 var attrSeeker = new RegExp(tagName + attrName + attrPartials + '+)([' + spaces + ']*/?>)', 'g');
