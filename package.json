@@ -20,7 +20,7 @@
   "author": "Andrea Giammarchi",
   "license": "ISC",
   "devDependencies": {
-    "ascjs": "^3.0.1",
+    "ascjs": "^4.0.0",
     "coveralls": "^3.0.5",
     "istanbul": "^0.4.5",
     "rollup": "^1.17.0",
